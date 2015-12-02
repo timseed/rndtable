@@ -7,11 +7,13 @@ c = conn.cursor()
 c.execute('SELECT * FROM people ')
 all_rows = c.fetchall()
 #sqlite returns an array of tuples...
+#Convert into a nested array
 data=[[col for col in r] for r in all_rows]
-pprint.pprint(all_rows)
-pprint.pprint(data)
+"""
+Now use the rndtab class -
+"""
 rt=tab.rndtab()
 rt.setdata(data)
-rt.random_row()
+pprint.pprint(rt.random_row())
 rt.dump()
 
