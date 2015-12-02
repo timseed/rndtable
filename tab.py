@@ -13,7 +13,9 @@ class tab(object):
         pprint.pprint(self.data)
 
     def setdata(self,d):
-        this.data=d
+        self.data=d
+        self.rows=len(d)
+        self.cols=len(d[0])
 
 class rndtab(tab):
 
