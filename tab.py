@@ -12,6 +12,9 @@ class tab(object):
     def dump(self):
         pprint.pprint(self.data)
 
+    def setdata(self,d):
+        this.data=d
+
 class rndtab(tab):
 
       def __init__(self):
